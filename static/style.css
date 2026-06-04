@@ -1,0 +1,106 @@
+body{
+    background:
+    linear-gradient(
+        rgba(255,240,245,0.75),
+        rgba(255,228,236,0.75)
+    ),
+    url("https://images.unsplash.com/photo-1522383225653-ed111181a951?q=80&w=1974&auto=format&fit=crop");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+}
+
+/* NAVBAR */
+.navbar{
+    background: linear-gradient(
+        to right,
+        #ff69b4,
+        #ffb6d9
+    ) !important;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.navbar-brand{
+    font-size: 28px;
+    font-weight: bold;
+    color: white !important;
+
+    display: flex;
+    align-items: center;
+}
+
+/* CARD */
+.card{
+    border: none !important;
+    border-radius: 30px !important;
+
+    background: rgba(255,255,255,0.25) !important;
+    backdrop-filter: blur(15px);
+
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+/* TITLE */
+h2,
+h4{
+    color: #ff4fa3;
+    font-weight: bold;
+}
+
+/* BUTTON */
+.btn{
+    border: none !important;
+    border-radius: 15px !important;
+
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* WARNA BUTTON */
+.btn-success{
+    background: #ff8dc7 !important;
+}
+
+.btn-info{
+    background: #ffb6d9 !important;
+}
+
+.btn-warning{
+    background: #ffd166 !important;
+}
+
+.btn-secondary{
+    background: #c084fc !important;
+}
+
+.btn-dark{
+    background: #ff4fa3 !important;
+}
+
+.btn-primary{
+    background: #ff69b4 !important;
+}
+
+/* INPUT */
+.form-control,
+.form-select{
+    border-radius: 15px !important;
+    border: 2px solid #ffd6ea;
+    padding: 12px;
+}
+
+/* TABLE */
+.table{
+    overflow: hidden;
+    border-radius: 20px;
+}

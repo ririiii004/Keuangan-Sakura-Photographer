@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Catat Transaksi Baru</h2>
+
+<hr>
+
+<form method="POST">
+
+    <div class="mb-3">
+        <label>Tanggal</label>
+        <input type="date" name="tanggal" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label>Deskripsi</label>
+        <input type="text" name="deskripsi" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label>Kategori</label>
+        <input type="text" name="kategori" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label>Jenis</label>
+
+        <select name="jenis" class="form-select">
+            <option value="masuk">Pemasukan</option>
+            <option value="keluar">Pengeluaran</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label>Jumlah (Rp)</label>
+        <input type="number" name="jumlah" class="form-control" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+        Simpan Transaksi
+    </button>
+
+    <a href="/laporan" class="btn btn-secondary">
+        Batal
+    </a>
+
+</form>
+
+{% endblock %}

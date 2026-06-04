@@ -1,0 +1,193 @@
+{% extends "base.html" %}
+
+{% block title %}Edit Transaksi{% endblock %}
+
+{% block content %}
+
+<style>
+
+.judul{
+    text-align:center;
+    color:#6d5960;
+    font-size:34px;
+    font-weight:700;
+    margin-bottom:25px;
+    letter-spacing:1px;
+}
+
+.form-box{
+    max-width:700px;
+    margin:auto;
+
+    background:rgba(255,255,255,0.65);
+
+    padding:30px;
+
+    border-radius:25px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.05);
+}
+
+.form-label{
+    color:#6d5960;
+    font-weight:600;
+    margin-bottom:8px;
+}
+
+.form-control,
+.form-select{
+    border-radius:15px;
+    border:1px solid #ead6d8;
+    padding:12px;
+}
+
+.form-control:focus,
+.form-select:focus{
+    border-color:#d89ca4;
+    box-shadow:0 0 10px rgba(216,156,164,0.25);
+}
+
+.btn-update{
+    background:#d89ca4;
+    color:white;
+    border:none;
+    border-radius:15px;
+    padding:12px 25px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.btn-update:hover{
+    background:#c67f89;
+    color:white;
+}
+
+.btn-batal{
+    background:#d8d8d8;
+    color:#555;
+    border:none;
+    border-radius:15px;
+    padding:12px 25px;
+    font-weight:600;
+}
+
+.btn-batal:hover{
+    background:#c8c8c8;
+    color:#444;
+}
+
+</style>
+
+<h2 class="judul">
+    Edit Transaksi
+</h2>
+
+<div class="form-box">
+
+<form method="POST">
+
+```
+<div class="mb-3">
+
+    <label class="form-label">
+        Tanggal
+    </label>
+
+    <input
+        type="date"
+        name="tanggal"
+        class="form-control"
+        value="{{ d[1] }}"
+        required>
+
+</div>
+
+<div class="mb-3">
+
+    <label class="form-label">
+        Deskripsi
+    </label>
+
+    <input
+        type="text"
+        name="deskripsi"
+        class="form-control"
+        value="{{ d[2] }}"
+        required>
+
+</div>
+
+<div class="mb-3">
+
+    <label class="form-label">
+        Kategori
+    </label>
+
+    <input
+        type="text"
+        name="kategori"
+        class="form-control"
+        value="{{ d[3] }}"
+        required>
+
+</div>
+
+<div class="mb-3">
+
+    <label class="form-label">
+        Jenis Transaksi
+    </label>
+
+    <select name="jenis" class="form-select">
+
+        <option value="masuk"
+        {% if d[4] == 'masuk' %}
+        selected
+        {% endif %}>
+        Pemasukan
+        </option>
+
+        <option value="keluar"
+        {% if d[4] == 'keluar' %}
+        selected
+        {% endif %}>
+        Pengeluaran
+        </option>
+
+    </select>
+
+</div>
+
+<div class="mb-4">
+
+    <label class="form-label">
+        Jumlah (Rp)
+    </label>
+
+    <input
+        type="number"
+        name="jumlah"
+        class="form-control"
+        value="{{ d[5] }}"
+        required>
+
+</div>
+
+<div class="d-flex gap-2">
+
+    <button type="submit" class="btn btn-update">
+        Simpan Perubahan
+    </button>
+
+    <a href="/laporan" class="btn btn-batal">
+        Kembali
+    </a>
+
+</div>
+```
+
+</form>
+
+</div>
+
+{% endblock %}

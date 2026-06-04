@@ -1,0 +1,163 @@
+{% extends "base.html" %}
+
+{% block title %}Laporan Laba Rugi{% endblock %}
+
+{% block content %}
+
+<style>
+
+.judul{
+    text-align:center;
+    color:#6d5960;
+    font-size:34px;
+    font-weight:700;
+    margin-bottom:30px;
+    letter-spacing:1px;
+}
+
+.card-sakura{
+    border:none;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,0.05);
+}
+
+.card-pendapatan{
+    background:#d8e2c8;
+    color:#4f5b48;
+}
+
+.card-beban{
+    background:#f4c2c2;
+    color:#6d5960;
+}
+
+.card-body{
+    padding:30px;
+}
+
+.card-body h5{
+    font-size:18px;
+    margin-bottom:15px;
+    font-weight:600;
+}
+
+.card-body h3{
+    font-size:30px;
+    font-weight:700;
+}
+
+.laba-box{
+
+    margin-top:25px;
+
+    background:rgba(216,156,164,0.18);
+
+    border-radius:25px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.05);
+}
+
+.laba-box h4{
+    color:#6d5960;
+    font-size:24px;
+}
+
+.laba-nilai{
+    color:#c67f89;
+    font-size:34px;
+    font-weight:700;
+}
+
+.btn-kembali{
+    background:#d89ca4;
+    color:white;
+    border:none;
+    border-radius:15px;
+    padding:12px 25px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.btn-kembali:hover{
+    background:#c67f89;
+    color:white;
+}
+
+</style>
+
+<h2 class="judul">
+    Laporan Laba Rugi
+</h2>
+
+<div class="row">
+
+```
+<div class="col-md-6 mb-3">
+
+    <div class="card card-sakura card-pendapatan">
+
+        <div class="card-body">
+
+            <h5>Total Pendapatan</h5>
+
+            <h3>
+                Rp {{ "{:,}".format(pendapatan) }}
+            </h3>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+    <div class="card card-sakura card-beban">
+
+        <div class="card-body">
+
+            <h5>Total Beban</h5>
+
+            <h3>
+                Rp {{ "{:,}".format(beban) }}
+            </h3>
+
+        </div>
+
+    </div>
+
+</div>
+```
+
+</div>
+
+<div class="laba-box">
+
+```
+<h4>
+    Laba Bersih
+</h4>
+
+<div class="laba-nilai">
+    Rp {{ "{:,}".format(laba) }}
+</div>
+```
+
+</div>
+
+<div class="mt-4">
+
+```
+<a href="/dashboard" class="btn btn-kembali">
+    Kembali ke Dashboard
+</a>
+```
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,282 @@
+{% extends "base.html" %}
+
+{% block title %}Laporan Keuangan{% endblock %}
+
+{% block content %}
+
+<style>
+
+.judul{
+    text-align:center;
+    color:#6d5960;
+    font-size:34px;
+    font-weight:700;
+    margin-bottom:30px;
+    letter-spacing:1px;
+}
+
+.btn-sakura{
+    background:rgba(216,156,164,0.85);
+    color:white;
+    border:none;
+    border-radius:15px;
+    padding:10px 18px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.btn-sakura:hover{
+    background:rgba(198,127,137,0.95);
+    color:white;
+}
+
+.filter-box{
+    background:rgba(255,255,255,0.65);
+    padding:20px;
+    border-radius:20px;
+    margin-bottom:25px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.05);
+}
+
+.table-sakura{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 6px 15px rgba(0,0,0,0.05);
+}
+
+.table-sakura thead{
+    background:#d89ca4;
+    color:white;
+}
+
+.table-sakura th{
+    border:none;
+}
+
+.table-sakura td{
+    vertical-align:middle;
+}
+
+.badge-masuk{
+    background:#b8d8b8;
+    color:#355e3b;
+    padding:8px 12px;
+    border-radius:10px;
+}
+
+.badge-keluar{
+    background:#f3c1c1;
+    color:#8b3a3a;
+    padding:8px 12px;
+    border-radius:10px;
+}
+
+.summary-box{
+    background:rgba(216,156,164,0.18);
+    border-radius:20px;
+    padding:25px;
+    margin-top:25px;
+}
+
+.summary-box h4{
+    color:#6d5960;
+    margin-bottom:10px;
+}
+
+.summary-box h3{
+    color:#c67f89;
+    font-weight:700;
+}
+
+</style>
+
+<h2 class="judul">
+    Data Transaksi
+</h2>
+
+<div class="d-flex justify-content-end gap-2 mb-3">
+
+    <a href="/tambah" class="btn btn-sakura">
+        Tambah Data
+    </a>
+
+    <a href="/cetak_pdf"
+       target="_blank"
+       class="btn btn-sakura">
+        Cetak PDF
+    </a>
+
+</div>
+
+<div class="filter-box">
+
+<form method="GET">
+
+<div class="row g-3">
+
+    <div class="col-md-3">
+
+        <select name="periode" class="form-select">
+
+            <option value="semua"
+            {% if periode=="semua" %}selected{% endif %}>
+            Semua Data
+            </option>
+
+            <option value="harian"
+            {% if periode=="harian" %}selected{% endif %}>
+            Harian
+            </option>
+
+            <option value="bulanan"
+            {% if periode=="bulanan" %}selected{% endif %}>
+            Bulanan
+            </option>
+
+            <option value="triwulan"
+            {% if periode=="triwulan" %}selected{% endif %}>
+            Triwulan
+            </option>
+
+        </select>
+
+    </div>
+
+    <div class="col-md-2">
+        <input type="date"
+               name="tanggal"
+               value="{{ tanggal }}"
+               class="form-control">
+    </div>
+
+    <div class="col-md-3">
+        <input type="month"
+               name="bulan"
+               value="{{ bulan }}"
+               class="form-control">
+    </div>
+
+    <div class="col-md-2">
+
+        <select name="triwulan" class="form-select">
+
+            <option value="">Pilih</option>
+
+            <option value="1">Triwulan I</option>
+            <option value="2">Triwulan II</option>
+            <option value="3">Triwulan III</option>
+            <option value="4">Triwulan IV</option>
+
+        </select>
+
+    </div>
+
+    <div class="col-md-2">
+
+        <button type="submit"
+                class="btn btn-sakura w-100">
+            Tampilkan
+        </button>
+
+    </div>
+
+</div>
+
+</form>
+
+</div>
+
+<div class="table-responsive table-sakura">
+
+<table class="table table-hover mb-0">
+
+    <thead>
+
+        <tr>
+            <th>No</th>
+            <th>Tanggal</th>
+            <th>Deskripsi</th>
+            <th>Kategori</th>
+            <th>Jenis</th>
+            <th>Jumlah</th>
+            <th>Aksi</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+    {% for d in data %}
+
+    <tr>
+
+        <td>{{ loop.index }}</td>
+        <td>{{ d[1] }}</td>
+        <td>{{ d[2] }}</td>
+        <td>{{ d[3] }}</td>
+
+        <td>
+
+            {% if d[4] == 'masuk' %}
+
+                <span class="badge-masuk">
+                    Pemasukan
+                </span>
+
+            {% else %}
+
+                <span class="badge-keluar">
+                    Pengeluaran
+                </span>
+
+            {% endif %}
+
+        </td>
+
+        <td>
+            Rp {{ "{:,}".format(d[5]) }}
+        </td>
+
+        <td>
+
+            <a href="/edit/{{ d[0] }}"
+               class="btn btn-warning btn-sm">
+                Edit
+            </a>
+
+            <a href="/hapus/{{ d[0] }}"
+               class="btn btn-danger btn-sm"
+               onclick="return confirm('Hapus data ini?')">
+                Hapus
+            </a>
+
+        </td>
+
+    </tr>
+
+    {% endfor %}
+
+    </tbody>
+
+</table>
+
+</div>
+
+<div class="summary-box">
+
+    <h4>
+        Total Pemasukan : Rp {{ masuk }}
+    </h4>
+
+    <h4>
+        Total Pengeluaran : Rp {{ keluar }}
+    </h4>
+
+    <h3>
+        Saldo Akhir : Rp {{ saldo }}
+    </h3>
+
+</div>
+
+{% endblock %}

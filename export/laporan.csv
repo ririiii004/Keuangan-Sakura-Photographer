@@ -1,0 +1,46 @@
+id,tanggal,deskripsi,kategori,jenis,jumlah
+1,2025-12-19,Modal awal untuk usaha jasa photographer sakura,Modal ,masuk,20000000
+2,2025-12-20,Pembelian camera canon EOS R50,Peralatan,keluar,11000000
+3,2025-12-20,Pembelian lensa camera canon RF 50mm F/1.8 STM,Peralatan,keluar,3100000
+4,2025-12-20,Pembelian lighting dan softbox octa,Peralatan,keluar,2200000
+5,2025-12-20,Pembelian card memory dan harddisk,Peralatan,keluar,800000
+6,2025-12-20,Pembelian cloud storage untuk satu tahun,Beban software,keluar,1100000
+7,2025-12-26,"Paket prewedding 90 menit: satu tempat dan satu konsep, free edit video dan 30 foto",Paket Lovely Bloom,masuk,1200000
+8,2025-12-26,Pembelian editing softwaree,Beban software,keluar,1250000
+9,2025-12-26,Pembelian bensin untuk transportasi,Beban Transportasi ,keluar,200000
+10,2026-01-02,Pembayaran wifi bulanan,Beban internet,keluar,175000
+11,2026-01-05,"Paket satu orang wisudawan keluarga: durasi 60 menit, 30 foto free edit",Paket Bloom,masuk,650000
+12,2026-01-08,"Paket dua orang wisudawan keluarga + teman: durasi 90 menit, free edit 50 foto dan 1 video ",Paket Twins Bloom,masuk,1200000
+13,2026-01-12,"Paket prewedding 200 menit: dua tempat dan dua konsep, free edit video dan 70 foto",Peket Dovely Bloom,masuk,2700000
+14,2026-01-15,"Paket prewedding 90 menit: satu tempat dan satu konsep, free edit video dan 30 foto",Paket Lovely Bloom,masuk,1200000
+15,2026-01-18,Pembelian bensin untuk transportasi,Beban Transportasi ,keluar,200000
+16,2026-01-22,"Paket satu orang wisudawan keluarga: durasi 60 menit, 30 foto free edit",Paket Bloom,masuk,650000
+17,2026-01-27,"Paket prewedding 200 menit: dua tempat dan dua konsep, free edit video dan 70 foto",Paket Lovely Bloom,masuk,2700000
+18,2026-02-01,"Upah gaji untuk admin, editor, dan photographer",Beban gaji,keluar,8020000
+19,2026-02-04,"Paket prewedding 90 menit: satu tempat dan satu konsep, free edit video dan 30 foto",Paket Lovely Bloom,masuk,1200000
+20,2026-02-02,Pembayaran wifi bulanan,Beban internet,keluar,175000
+21,2025-12-19,Pembayaran listrik bulanan,Beban listrik,keluar,150000
+22,2026-02-11,"Paket satu orang wisudawan keluarga: durasi 60 menit, 30 foto free edit",Paket Bloom,masuk,650000
+23,2026-02-11,Pembelian bensin untuk transportasi,Beban Transportasi ,keluar,250000
+24,2026-02-15,"Paket dua orang wisudawan keluarga + teman: durasi 90 menit, free edit 50 foto dan 1 video ",Paket Twins Bloom,masuk,1200000
+25,2026-02-18,Pembelian baterai kamera cadangan,Peralatan,keluar,900000
+26,2026-02-22,"Paket prewedding 200 menit: dua tempat dan dua konsep, free edit video dan 70 foto",Paket Dovely Bloom,masuk,2700000
+27,2026-02-23,"Paket dua orang wisudawan keluarga + teman: durasi 90 menit, free edit 50 foto dan 1 video ",Paket Twins Bloom,masuk,1200000
+28,2026-02-24,"Paket satu orang wisudawan keluarga: durasi 60 menit, 30 foto free edit",Paket Bloom,masuk,650000
+29,2026-02-24,"Paket prewedding 90 menit: satu tempat dan satu konsep, free edit video dan 30 foto",Paket Lovely Bloom,masuk,1200000
+30,2026-02-26,Pembelian bensin untuk transportasi,Beban Transportasi ,keluar,200000
+31,2026-02-27,"Paket satu orang wisudawan keluarga: durasi 60 menit, 30 foto free edit",Paket Bloom,masuk,650000
+32,2026-01-19,Pembayaran listrik bulanan,Beban listrik,masuk,100000
+33,2026-03-01,"Upah gaji untuk admin, editor, dan photographer",Beban gaji,keluar,8104000
+34,2026-03-02,Pembayaran wifi bulanan,Beban internet,keluar,175000
+35,2026-03-04,"Paket prewedding 90 menit: satu tempat dan satu konsep, free edit video dan 30 foto",Paket Lovely Bloom,masuk,1200000
+36,2026-03-07,"Paket prewedding 90 menit: satu tempat dan satu konsep, free edit video dan 30 foto",Paket Lovely Bloom,masuk,1200000
+37,2026-03-07,Pembelian bensin untuk transportasi,Beban Transportasi ,keluar,250000
+38,2026-03-13,"Paket prewedding 200 menit: dua tempat dan dua konsep, free edit video dan 70 foto",Paket Dovely Bloom,masuk,2700000
+39,2026-03-14,"Paket satu orang wisudawan keluarga: durasi 60 menit, 30 foto free edit",Paket Bloom,masuk,650000
+40,2026-03-14,Pembelian bensin untuk transportasi,Beban Transportasi ,keluar,200000
+41,2026-03-15,"Paket prewedding 200 menit: dua tempat dan dua konsep, free edit video dan 70 foto",Paket Dovely Bloom,masuk,2700000
+42,2026-03-19,Pembayaran wifi bulanan,Beban internet,keluar,175000
+43,2026-03-20,"Paket satu orang wisudawan keluarga: durasi 60 menit, 30 foto free edit",Paket Bloom,masuk,650000
+44,2026-03-22,"Paket prewedding 90 menit: satu tempat dan satu konsep, free edit video dan 30 foto",Paket Lovely Bloom,masuk,1200000
+45,2026-03-26,"Paket dua orang wisudawan keluarga + teman: durasi 90 menit, free edit 50 foto dan 1 video ",Paket Twins Bloom,masuk,1200000

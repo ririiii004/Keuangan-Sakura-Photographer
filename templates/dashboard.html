@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+
+<style>
+
+body{
+    background:#f8f4ee;
+}
+
+.judul{
+    text-align:center;
+    color:#6d5960;
+    font-size:34px;
+    font-weight:700;
+    margin-bottom:35px;
+    letter-spacing:1px;
+}
+
+.menu-btn{
+    background:rgba(216,156,164,0.85);
+    color:white !important;
+
+    border:none;
+    border-radius:22px;
+
+    height:85px;
+
+    font-size:22px;
+    font-weight:600;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:0 6px 15px rgba(0,0,0,0.08);
+
+    transition:0.3s;
+}
+
+.menu-btn:hover{
+    transform:translateY(-4px);
+    background:rgba(198,127,137,0.95);
+}
+
+.menu-container{
+    max-width:700px;
+    margin:auto;
+}
+
+</style>
+
+<h2 class="judul">
+    Sakura Financial Statement
+</h2>
+
+<div class="menu-container">
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-8 mb-3">
+            <a href="/tambah" class="btn menu-btn w-100">
+                Catat Transaksi
+            </a>
+        </div>
+
+        <div class="col-md-8 mb-3">
+            <a href="/laporan" class="btn menu-btn w-100">
+                Data Transaksi
+            </a>
+        </div>
+
+        <div class="col-md-8 mb-3">
+            <a href="/laba_rugi" class="btn menu-btn w-100">
+                Laba Rugi
+            </a>
+        </div>
+
+        <div class="col-md-8 mb-3">
+            <a href="/neraca" class="btn menu-btn w-100">
+                Neraca
+            </a>
+        </div>
+
+        <div class="col-md-8 mb-3">
+            <a href="/grafik" class="btn menu-btn w-100">
+                Grafik
+            </a>
+        </div>
+
+        <div class="col-md-8 mb-3">
+            <a href="/export" class="btn menu-btn w-100">
+                Export CSV
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,231 @@
+{% extends "base.html" %}
+
+{% block title %}Neraca Sakura{% endblock %}
+
+{% block content %}
+
+<style>
+
+.judul{
+    text-align:center;
+    color:#6d5960;
+    font-size:34px;
+    font-weight:700;
+    margin-bottom:25px;
+    letter-spacing:1px;
+}
+
+.neraca-box{
+
+    background:rgba(255,255,255,0.65);
+
+    padding:25px;
+
+    border-radius:25px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.05);
+}
+
+.table-sakura{
+
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 6px 15px rgba(0,0,0,0.05);
+}
+
+.table-sakura thead{
+
+    background:#d89ca4;
+
+    color:white;
+}
+
+.table-sakura th{
+
+    border:none;
+
+    text-align:center;
+}
+
+.table-sakura td{
+
+    vertical-align:middle;
+
+    padding:15px;
+}
+
+.aset-row{
+
+    background:#d8e2c8;
+
+    color:#4f5b48;
+}
+
+.utang-row{
+
+    background:#f4c2c2;
+
+    color:#6d5960;
+}
+
+.modal-row{
+
+    background:#e3d5ff;
+
+    color:#6b5d83;
+}
+
+.nominal{
+
+    font-weight:700;
+
+    font-size:18px;
+}
+
+.persamaan-box{
+
+    margin-top:25px;
+
+    background:rgba(216,156,164,0.18);
+
+    border-radius:25px;
+
+    padding:25px;
+
+    text-align:center;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.05);
+}
+
+.persamaan-box h5{
+
+    color:#6d5960;
+
+    margin-bottom:10px;
+
+    font-weight:600;
+}
+
+.rumus{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#c67f89;
+}
+
+.btn-kembali{
+
+    background:#d89ca4;
+
+    color:white;
+
+    border:none;
+
+    border-radius:15px;
+
+    padding:12px 25px;
+
+    font-weight:600;
+
+    transition:0.3s;
+}
+
+.btn-kembali:hover{
+
+    background:#c67f89;
+
+    color:white;
+}
+
+</style>
+
+<h2 class="judul">
+    Neraca Keuangan
+</h2>
+
+<div class="neraca-box">
+
+    <div class="table-responsive">
+
+        <table class="table table-sakura mb-0">
+
+            <thead>
+
+                <tr>
+                    <th>Komponen</th>
+                    <th>Nilai (Rp)</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr class="aset-row">
+
+                    <td class="fw-bold">
+                        💰 Aset (Kas)
+                    </td>
+
+                    <td class="nominal">
+                        Rp {{ "{:,}".format(aset) }}
+                    </td>
+
+                </tr>
+
+                <tr class="utang-row">
+
+                    <td class="fw-bold">
+                        🧾 Kewajiban / Utang
+                    </td>
+
+                    <td class="nominal">
+                        Rp {{ "{:,}".format(kewajiban) }}
+                    </td>
+
+                </tr>
+
+                <tr class="modal-row">
+
+                    <td class="fw-bold">
+                        🌸 Modal (Equity)
+                    </td>
+
+                    <td class="nominal">
+                        Rp {{ "{:,}".format(modal) }}
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<div class="persamaan-box">
+
+    <h5>Persamaan Akuntansi</h5>
+
+    <div class="rumus">
+        Aset = Kewajiban + Modal
+    </div>
+
+</div>
+
+<div class="mt-4">
+
+    <a href="/dashboard" class="btn btn-kembali">
+        Kembali ke Dashboard
+    </a>
+
+</div>
+
+{% endblock %}
